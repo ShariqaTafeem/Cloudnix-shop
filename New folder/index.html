@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudnix Onboarding</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Welcome Page -->
+    <div id="welcomePage">
+        <h1>Welcome to Cloudnix</h1>
+        <button onclick="showPage('themePage')">Start Onboarding</button>
+    </div>
+
+    <!-- Theme Selection Page -->
+    <div id="themePage" style="display: none;">
+        <h2>Select a Theme</h2>
+        <div class="theme-container">
+            <div class="theme-item">
+                <img src="C:\Users\Dell\Desktop\Assessment project\assets\images\modern.jpg\modern.jpg" alt="Modern Theme">
+                <label><input type="checkbox" id="modern"> Modern</label>
+            </div>
+            <div class="theme-item">
+                <img src="C:\Users\Dell\Desktop\Assessment project\assets\images\minimalist.jpg\minimalist.jpg" alt="Minimalist Theme">
+                <label><input type="checkbox" id="minimalist"> Minimalist</label>
+            </div>
+            <div class="theme-item">
+                <img src="C:\Users\Dell\Desktop\Assessment project\assets\images\vintage.jpg\vintage.jpg" alt="Vintage Theme">
+                <label><input type="checkbox" id="vintage"> Vintage</label>
+            </div>
+        </div>
+        <button onclick="showPage('welcomePage')">Back</button>
+        <button onclick="showPage('productPage')">Next</button>
+    </div>
+
+    <!-- Product Type & Category Page -->
+    <div id="productPage" style="display: none;">
+        <h2>Select Product Type & Category</h2>
+        <div class="scroll-container">
+            <label>
+                <input type="checkbox" id="clothing"> Clothing
+            </label>
+            <select>
+                <option>Men's Wear</option>
+                <option>Women's Wear</option>
+                <option>Kids Wear</option>
+            </select>
+
+            <label>
+                <input type="checkbox" id="electronics"> Electronics
+            </label>
+            <select>
+                <option>Laptops</option>
+                <option>Mobiles</option>
+                <option>Watches</option>
+            </select>
+
+            <label>
+                <input type="checkbox" id="homeDecor"> Home Decor
+            </label>
+            <select>
+                <option>Lights</option>
+                <option>Bedsheets</option>
+                <option>Vases</option>
+            </select>
+        </div>
+
+        <button onclick="showPage('themePage')">Back</button>
+        <button onclick="showPage('pricingPage')">Next</button>
+    </div>
+
+    <!-- Pricing Page -->
+    <div id="pricingPage" style="display: none;">
+        <div class="pricing-container">
+    
+            <h2>Let's add your first product</h2>
+    
+            <!-- Basic Details Section -->
+            <div class="basic-details">
+                <h3>Basic Details</h3>
+                <label>Product Name</label>
+                <input type="text" placeholder="e.g.Laptop">
+    
+                <label>Product Description</label>
+                <input type="text" placeholder="Input text">
+    
+                <label>Add Image(s)</label>
+                <input type="file">
+    
+                <input type="checkbox"> This product has an SKU code
+                <input type="text" placeholder="e.g. PROD001">
+    
+                <input type="checkbox"> This product has an HSN/SAC code
+                <input type="text" placeholder="">
+    
+            </div>
+    
+            <!-- Pricing Details Section -->
+            <div class="pricing-details">
+                <h3>Pricing Details</h3>
+    
+                <input type="checkbox"> Price inclusive of GST
+    
+                <div class="pricing-inputs">
+                    <label>Net Price</label>
+                    <input type="text" placeholder="e.g. 35000">
+    
+                    <label>List Price</label>
+                    <input type="text" placeholder="e.g. 40000">
+    
+                    <label>Discount Percentage</label>
+                    <input type="text" placeholder="e.g. 20">
+    
+                    <label>GST Rate</label>
+                    <input type="text" placeholder="e.g. 1678">
+    
+                    <label>Shipping Charges (if any)</label>
+                    <input type="text" placeholder="e.g. 500">
+    
+                    <label>Stock Level</label>
+                    <input type="text" placeholder="e.g. 11">
+                </div>
+            </div>
+    
+            <!-- Navigation Buttons -->
+            <div class="button-container">
+                <button onclick="showPage('productPage')">Back</button>
+                <button onclick="submitForm()">Submit</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+</div>
+    <script src="C:\Users\Dell\Desktop\Assessment project\assets\js\script.js"></script>
+</body>
+</html>
